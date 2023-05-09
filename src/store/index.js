@@ -6,9 +6,11 @@ const songsSlice=createSlice({
   reducers:{
     addSong(state, action){
       state.push(action.payload)
+      console.log(state.length)
     },
     removeSong(state,action){
-      //
+      const index=state.indexOf(action.payload)
+      state.splice(index,1);
     }
 
   }
@@ -34,4 +36,4 @@ const store = configureStore({
 export { store };
 console.log(songsSlice.actions.addSong())
 
-export const {addSong} =songsSlice.actions;
+export const {addSong,removeSong} =songsSlice.actions;
