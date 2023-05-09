@@ -31,4 +31,7 @@ const store = configureStore({
 // const finalizeStore=store.getState()
 // console.log(JSON.stringify(finalizeStore));
 
-export {store};
+export { store };
+console.log(songsSlice.actions.addSong())
+
+export const {addSong} =songsSlice.actions;
