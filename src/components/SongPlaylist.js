@@ -10,20 +10,14 @@ function SongPlaylist() {
   const songPlaylist = useSelector((state)=>{
     console.log(state)
     return state.songs
-    
   });
 
-  const handleSongAdd = (song) => {
-    
-   dispatch(addSong(song))
-    
-    // To Do:
-    // Add song to list of songs
+  const handleSongAdd = (song) => { 
+   dispatch(addSong(song))  
   };
+
   const handleSongRemove = (song) => {
     dispatch(removeSong(song))
-    // To Do:
-    // Remove song from list of songs
   };
 
   const renderedSongs = songPlaylist.map((song) => {
@@ -47,7 +41,7 @@ function SongPlaylist() {
         <div className="buttons">
           <button
             onClick={() => handleSongAdd(createRandomSong())}
-            className="button is-link"
+            className="bg-green-700 text-white rounded-xl p-2 "
           >
             + Add Song to Playlist
           </button>
